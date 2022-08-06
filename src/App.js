@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import GithubDetails from "./components/GithubDetails";
 import GithubForm from "./components/GithubForm.jsx";
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     return (
         <div className="App">
             <h1>Hello Elliot!!</h1>
-            <GithubForm res={res} setRes={setRes} />
+            <GithubForm setRes={setRes} />
+            {Object.keys(res).length > 0 && <GithubDetails res={res} />}
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-function GithubForm({ res, setRes }) {
+function GithubForm({ setRes }) {
     const [search, setSearch] = useState("");
     function handleChange(e) {
         setSearch(e.target.value);
@@ -17,6 +17,7 @@ function GithubForm({ res, setRes }) {
             .catch((err) => {
                 console.log(err);
             });
+        setSearch("");
     }
     return (
         <form className="form-group" onSubmit={handleSubmit}>

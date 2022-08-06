@@ -30,3 +30,8 @@
     color: white;
     background-color: #444;
 }
+
+.profile-img {
+    height: 10rem;
+    border-radius: 1rem;
+}
